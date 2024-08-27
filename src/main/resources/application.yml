@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: prod
+
+  data:
+    redis:
+      host: 133.186.241.167
+      port: 6379
+      database: 11
+      password: "*N2vya7H@muDTwdNMR!"
+
+  datasource:
+    url: jdbc:mysql://133.186.241.167:3306/be6_3runner_prod
+    username: be6_3runner
+    password: tHos2g5st4@XH7mT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: org.apache.commons.dbcp2.BasicDataSource
+    dbcp2:
+      initial-size: 5
+      max-total: 20
+      max-idle: 20
+      min-idle: 5
+      test-on-borrow: true
+      validation-query: SELECT 1
+
+  application:
+    name: 3runner-batch
+  rabbitmq:
+    host: 133.186.241.167
+    port: 6379
+    username: admin
+    password: nhnacademy123!
+  jpa:
+    show-sql: true
+
+
+
+elasticsearch:
+  url: 115.94.72.197:9200
+  key: Q0I4SjQ1QUIyMlNic1BPbmdUVmU6YlRpV3RwSlFTMGFESjQxWnRXWlBiUQ==
+
+server:
+  port: 8084
